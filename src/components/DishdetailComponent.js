@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
-function RenderDish({dish}) {
+function RenderDish({ dish }) {
   return (
     <div className="col-12 col-md-5 m-1">
       <Card width="18rem">
@@ -15,26 +15,27 @@ function RenderDish({dish}) {
   );
 }
 
-function RenderComments({comments}) {
-    if (comments != null) {
-      return (
+function RenderComments({ comments }) {
+  if (comments != null) {
+    return (
       <div className="col-12 col-md-5 m-1">
-      <h4>Comments</h4>
-      <ul className="list-unstyled">
-        {comments.map((comment) => {
-          return (
-            <div>
+        <h4>Comments</h4>
+        <ul className="list-unstyled">
+          {comments.map((comment) => {
+            return (
+              <div>
                 <li key={comment.id}>
                   <ul>{comment.comment}</ul>
                   <ul>
-                    -- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
+                    -- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(comment.date)))}
                   </ul>
                 </li>
-            </div>
-          );
-        })};
-      </ul>
-      </div>)
+              </div>
+            );
+          })};
+        </ul>
+      </div>
+    );
 
     } else {
       <div></div>
