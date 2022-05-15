@@ -33,7 +33,7 @@ In the project directory, you can:
 
 ## `yarn install`
 
-Installs the node modules necessary to make the application works.
+Installs the node modules needed to make the application work.
 
 ## `yarn start`
 
